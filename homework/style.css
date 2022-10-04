@@ -70,28 +70,23 @@ a.active, a:hover{
 }
 
 footer p{
-    position: absolute;
+    margin-top: 15px;
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: white;
+    color: solid black;
     margin-bottom: 15px;
     
 }
 
 footer{
     display: flex;
-    position: absolute;
-    bottom: 0;
-    background: #0082e6;
     height: 50px;
+    background: #0082e6;
     width: 98%;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    margin-bottom: 5px;
-    margin-inline: 12px;
+    border-radius: 30px;
+    margin-left: 1%;
+    margin-bottom: 10px;
 }
 
 .linkcontainer > li{
@@ -114,8 +109,9 @@ article > section{
 }
 
 .article-content > img{
+    padding-top: 10px;
     display: block;
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -137,8 +133,38 @@ aside{
     background-color: gray;
     margin-inline: 20px;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 main{
     flex-grow: 0.5;
+}
+
+.article-details{
+    padding-top: 10px;
+}
+
+.article-details > span{
+    float: right;
+    color: white;
+}
+
+.article-content > p{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 17px;
+}
+
+.article-footer{
+    padding-bottom: 10px;
+}
+
+.article-footer > img{
+    margin: -16px;
+    
+}
+
+div p{
+    color: aquamarine;
 }
