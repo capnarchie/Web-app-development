@@ -1,13 +1,13 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import home from './views/home.vue';
+import navbarVue from './components/navbar.vue';
 </script>
 
 
 
 <template>
-  <header>
+  <!-- <header>
   
     <div class="wrapper">
         <div class="navbar">
@@ -16,10 +16,24 @@ import home from './views/home.vue';
           <RouterLink to="/homepage">homepage</RouterLink>
         </div>
     </div>
-  </header>
-
-  <RouterView />
+  </header> -->
+  <navbarVue></navbarVue>
+  <Suspense>
+    <RouterView />
+  </Suspense>
 </template>
+
+<script>
+  import navbar from './components/navbar.vue';
+  
+  export default {
+    components: {
+      navbar: navbar,
+    },
+  };
+</script>
+
+
 
 <style>
 

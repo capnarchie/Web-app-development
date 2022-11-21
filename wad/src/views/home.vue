@@ -1,13 +1,20 @@
 <script>
-import * as post from '/public/post.js'
-
+import Posts from "../components/posts.vue";
+import { computed, VueElement } from 'vue'
+import { useStore } from 'vuex'
 export default {
-  data() {
-    return {
-      message: `Hello ${post.MY_CONST}!` // Hello Vue.js!
-    }
+    components: {
+      Posts
+  },
+  setup() {
+    const store = useStore()
   }
 }
+
+</script>
+
+<script setup>
+const posts = await fetch("https://raw.githubusercontent.com/capnarchie/capnarchie.github.io/main/data.json").then(data => data.json());
 </script>
 <template>
 <body>
@@ -30,8 +37,7 @@ export default {
 
     <div class="flex-container">
         <aside></aside>
-        <main class="flex-container flex-column justify-space" id="posts">
-        </main>
+        <Posts :posts="posts" />
         <aside></aside>
     </div>
     
