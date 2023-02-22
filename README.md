@@ -1,2 +1,2 @@
-# Web-app-development
-full stack in a nutshell
+# Web-Application-Development
+Web Application Development course repository
